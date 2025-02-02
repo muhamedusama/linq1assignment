@@ -35,10 +35,22 @@ namespace linq1assignment
             #endregion
 
             #region Extension Method
-            int number = 12345;
-            int y = number.reverse();
-            Console.WriteLine(y);
+            //int number = 12345;
+            //int y = number.reverse();
+            //Console.WriteLine(y);
             #endregion
+
+            #region what is Linq
+            //List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            //var odds = numbers.Where(n => n % 2 == 1);
+
+            //numbers.AddRange([10, 11, 12, 13, 14, 15]);
+
+            //foreach (int odd in odds)
+            //    Console.WriteLine(odd);
+            #endregion
+
         }
     }
 }
