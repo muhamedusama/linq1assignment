@@ -51,6 +51,34 @@ namespace linq1assignment
             //    Console.WriteLine(odd);
             #endregion
 
+            #region Linq syntax
+            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            #region fluent syntax
+            // 1) fluent syntax
+
+
+            //// 1.1 static method
+            //var odd = Enumerable.Where(numbers, n => n % 2 == 1);
+            //foreach (int n in odd)
+            //    Console.WriteLine(n);
+
+            //// 1.2 extension method [recommended]
+            //var odds = numbers.Where(n => n % 2 == 1);
+            //foreach (int n in odds)
+            //    Console.WriteLine(n);
+            #endregion
+
+            #region Query syntax
+            // 2)Query syntax
+            // like sql server style
+            //var oddnumbers=from n in numbers
+            //               where n%2==1
+            //               select n;
+            //foreach(var n in oddnumbers) 
+            //    Console.WriteLine(n);
+            #endregion
+            #endregion
+
         }
     }
 }
