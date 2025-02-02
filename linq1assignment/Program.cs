@@ -1,5 +1,5 @@
 ﻿using linq1demo;
-
+using static linq1demo.ListGenerator;
 namespace linq1assignment
 {
     internal class Program
@@ -101,6 +101,24 @@ namespace linq1assignment
             //    Console.WriteLine(n);
             #endregion
             #endregion
+
+            #region filteration (restrication) operator - where 
+            //var result = ProductList.Where(n => n.UnitsInStock == 0);
+            //result=from p in ProductList
+            //       where p.UnitsInStock == 0
+            //       select p;
+            //var result = ProductList.Where(p => p.UnitsInStock == 0 && p.Category == "Meat/Poultry");
+
+            //result= from p in ProductList
+            //        where p.UnitsInStock == 0 && p.Category=="Meat/Poultry"
+            //        select p;
+
+            //indexed where 
+            //var result = ProductList.Where()
+            //foreach (var unit in result) 
+            //    Console.WriteLine(unit);
+            #endregion
+
 
         }
     }
