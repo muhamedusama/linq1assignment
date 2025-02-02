@@ -52,7 +52,7 @@ namespace linq1assignment
             #endregion
 
             #region Linq syntax
-            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             #region fluent syntax
             // 1) fluent syntax
 
@@ -75,6 +75,29 @@ namespace linq1assignment
             //               where n%2==1
             //               select n;
             //foreach(var n in oddnumbers) 
+            //    Console.WriteLine(n);
+            #endregion
+            #endregion
+
+            #region Linq execution ways
+            #region defered execution
+            //List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            //var result = numbers.Where(n => n % 2 == 1);
+            //numbers.AddRange([11, 12, 13, 14, 15]);
+
+            //foreach (var n in result)
+            //    Console.WriteLine(n);
+            #endregion
+
+            #region immediate execution
+            //List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            //var result = numbers.Where(n => n % 2 == 1).ToList();
+
+            //numbers.AddRange([11, 12, 13, 14, 15]);
+
+            //foreach (var n in result)
             //    Console.WriteLine(n);
             #endregion
             #endregion
