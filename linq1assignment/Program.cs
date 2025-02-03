@@ -119,6 +119,70 @@ namespace linq1assignment
             //    Console.WriteLine(unit);
             #endregion
 
+            #region transformation (projectors) operators
+
+            #region Select
+            //// var result = ProductList.Select(p => p.ProductName);
+            //// result=from p in ProductList
+            ////        select p.ProductName;
+            //// foreach (var item in result) 
+            ////     Console.WriteLine(item);
+
+            //var result = ProductList.Where(p => p.UnitsInStock > 0)
+            //                      .Select(p => $"{p.ProductID} :: {p.ProductName}");
+            //result = from p in ProductList
+            //         where p.UnitsInStock > 0
+            //         select $"{p.ProductID} :: {p.ProductName}";
+            //foreach ( var item in result ) 
+            //    Console.WriteLine(item);
+
+            //var result = ProductList.Where(p => p.UnitsInStock > 0)
+            //                       .Select(p => new { p.ProductID , p.ProductName});
+            //result = from p in ProductList
+            //         where p.UnitsInStock > 0
+            //         select new { p.ProductID, p.ProductName };
+
+            //var result = ProductList.Where(p => p.UnitsInStock > 0)
+            //                      .Select(p =>
+            //                      new
+            //                      {
+            //                          p.ProductID,
+            //                          p.ProductName,
+            //                          newprice=p.UnitPrice-(p.UnitPrice*.2M)
+            //                      });
+
+            //result = from p in ProductList
+            //         where p.UnitsInStock > 0
+            //         select new
+            //         {
+            //             p.ProductID,
+            //             p.ProductName,
+            //             newprice = p.UnitPrice - (p.UnitPrice * .2M)
+            //         };
+
+
+            //foreach ( var item in result)
+            //       Console.WriteLine(item);
+            #endregion
+
+            #region selectmany
+            //var result = CustomerList.SelectMany(c => c.Orders);
+
+            //result = from c in CustomerList
+            //         from o in c.Orders
+            //         select o;
+
+            //var result = CustomerList.SelectMany(c => c.Orders!,(customer,order)=>new {customer,order});
+
+            //result = from C in CustomerList
+            //         from O in C.Orders
+            //         select new { Customer = C, Order = O};
+            //foreach (var item in result) 
+            //    Console.WriteLine($"{item.customer.CustomerName} :: {item.order}");
+            #endregion
+
+            #endregion
+
 
         }
     }
