@@ -183,6 +183,23 @@ namespace linq1assignment
 
             #endregion
 
+            #region ordering operator
+
+            //var result = ProductList.OrderBy(p=>p.UnitsInStock);
+            //result = from p in ProductList
+            //         orderby p.UnitsInStock
+            //         select p;
+
+            //var result = ProductList.OrderByDescending(p => p.UnitsInStock).ThenByDescending(p => p.UnitPrice);
+
+            //result = from p in ProductList
+            //         orderby p.UnitsInStock descending, p.UnitPrice descending
+            //         select p;
+            //foreach (var item in result)
+            //    Console.WriteLine(item);
+            
+            #endregion
+
 
         }
     }

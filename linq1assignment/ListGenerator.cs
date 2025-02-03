@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace linq1demo
 {
 
-    class Product
+    class Product : IComparable<Product>
     {
         public long ProductID { get; set; }
         public string ProductName { get; set; }
@@ -19,7 +19,7 @@ namespace linq1demo
 
         public override string ToString()
             => $"ProductID: {ProductID}, ProductName: {ProductName}, Category: {Category}, UnitPrice: {UnitPrice:c}, UnitsInStock: {UnitsInStock}";
-
+        public int CompareTo(Product? other) => this.UnitPrice.CompareTo(other?.UnitPrice);
     }
     class Customer
     {
@@ -46,7 +46,7 @@ namespace linq1demo
         public override string ToString()
             => $"{CustomerID}, {CustomerName}, {Address}, {City}, {Region}, {PostalCode}, {Country}, {Phone}, {Fax}";
     }
-    class Order
+    class Order 
     {
 
         public int OrderID { get; set; }
@@ -63,7 +63,7 @@ namespace linq1demo
         {
 
         }
-
+        
         public override string ToString()
             => $"Order Id: {OrderID}, Date: {OrderDate.ToShortDateString()}, Total: {Total}";
     }
